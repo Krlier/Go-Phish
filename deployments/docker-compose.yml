@@ -1,0 +1,11 @@
+version: '3'
+services:
+
+  phishapi:
+    container_name: phishContainer
+    build:
+      context: ../
+      dockerfile: deployments/phishapi.Dockerfile
+    command: "go run main.go levenshtein.go"
+    ports:
+      - "8888:8888"
