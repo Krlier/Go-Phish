@@ -59,7 +59,7 @@ func GoLevenshtein(siteName string) (float32, string) {
 		siteCodeSize := len(siteCode)
 		percent = 100 * (float32(distance) / float32(siteCodeSize))
 		fmt.Println("\n Website: ", result.DomainName)
-		fmt.Println("O percentual é de: ", percent)
+		fmt.Println("The percentage is: ", percent)
 
 		if percent <= smallestPercent {
 			smallestPercent = percent
