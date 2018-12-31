@@ -46,7 +46,7 @@ func GoLevenshtein(siteName string) (float32, string) {
 	var percent float32
 	smallestPercent = 100
 	for _, result := range d {
-		if result.DomainName == "globo.com" {
+		if result.DomainName == siteName {
 			continue
 		}
 		outWgetInstance, err := exec.Command("wget", "-O-", "--waitretry=0", "--tries=5", result.DomainName).Output()
